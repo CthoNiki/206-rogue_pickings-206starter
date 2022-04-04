@@ -11,7 +11,7 @@ body {
 
 .container {
 	max-width: 1200px;
-	width: 90%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -24,9 +24,6 @@ h3 {
 	color: black;
 	text-transform: uppercase;
 	font-weight: 700;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 h1 {
 	font-size: 1.875em;
@@ -46,18 +43,17 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	/*height: 110px;*/
 	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-flow: column nowrap;
+	width: 100%;
+	text-align: center;
 }
 
 header h1 {
 	margin: 0;
-	padding: 20px 0;
+	padding: 10px 0;
+	width: 100%;
+	border-bottom: #77a466 2px solid;
 }
 header h1 span {
 	color: #77a466;
@@ -119,14 +115,10 @@ header nav ul li a{
 .section-one,
 .section-two,
 .section-three {
-	width: 90%;
+	width: 100%;
 	height: auto;
 	border-top: 1px solid #eee;
 	padding-left: 20px;
-	display: flex;
-	justify-content: flex-start;
-	align-items: stretch;
-	flex-flow: row wrap;
 }
 
 .section-one h3 {
@@ -140,7 +132,7 @@ header nav ul li a{
 
 .section-two h3,
 .section-three h3 {
-	padding: 10px 30px;
+	padding: 10px;
 }
 
 .menu {
@@ -167,6 +159,7 @@ header nav ul li a{
 footer {
 	border-top: 3px solid #eee;
 	margin: 0 auto;
+	width: 100%;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -178,4 +171,68 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+	padding: 0px 10px 0px 10px;
+}
+
+@media all and (min-width:768px) {
+	.top-section,
+	.bottom-section {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content:center;
+		align-items:flex-start;
+		flex-flow: row wrap;
+		height:auto;
+	}
+	
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 30%;
+		height: auto;
+		border-top: 1px solid #eee;
+		padding-left: 20px;
+	}
+}
+ 
+@media all and (min-width:1200px) {
+	header {
+		border-bottom: 3px solid #77a466;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-flow: row wrap;
+		border-bottom: #77a466 solid 2px;
+	}
+	
+	header nav ul li {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 0.875em;
+		padding: 10px 10px 10px 10px;
+		list-style-type: none;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	.top-section,
+	.bottom-section {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content:left;
+		align-items:flex-start;
+		flex-flow: row wrap;
+		height:auto;
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 30%;
+		height: auto;
+		border-top: 1px solid #eee;
+		padding-left: 20px;
+	}
+ 
 }
